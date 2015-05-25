@@ -5,8 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
-
-gem 'sass', '3.2.19'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -15,17 +15,16 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 4.0.3'
+gem 'jquery-rails'
 
-gem 'bower-rails', '~> 0.9.2'
+gem 'bower-rails'
 
-gem "foreman", '~> 0.78.0'
+gem "foreman"
 group :production, :staging do
   gem "rails_12factor"
   gem "rails_stdout_logging"
   gem "rails_serve_static_assets"
 end
-
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -40,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'sass', '3.2.19'
 group :development, :test do
 
   gem "rspec-rails", "~> 2.0"
