@@ -1,0 +1,281 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"userId"
+			],
+			[
+				"users",
+				"users"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/sessor/app/components/home/menuController.js",
+		"/C/xampp/htdocs/sessor/app/components/home/menuFactory.js",
+		"/C/xampp/htdocs/sessor/app/components/menu/menuFactory.js",
+		"/C/xampp/htdocs/sessor/app/components/home/menuDirective.js",
+		"/C/xampp/htdocs/sessor/app/components/user/addUser.php",
+		"/C/xampp/htdocs/sessor/app/components/home/pages.json",
+		"/C/xampp/htdocs/sessor/app/components/user/list_template.html",
+		"/C/xampp/htdocs/sessor/app/components/user/page_template.html",
+		"/C/xampp/htdocs/sessor/app/components/user/userFactory.js",
+		"/C/xampp/htdocs/sessor/app/components/user/userDirectives.js",
+		"/C/xampp/htdocs/sessor/app/components/user/userController.js",
+		"/C/xampp/htdocs/sessor/app/components/user/updateUser.php",
+		"/C/xampp/htdocs/sessor/app/components/user/getUsers.php",
+		"/C/xampp/htdocs/sessor/app/components/user/getUser.php",
+		"/C/xampp/htdocs/sessor/app/components/user/deleteUser.php",
+		"/C/xampp/htdocs/sessor/app/components/user/user.css",
+		"/C/xampp/htdocs/sessor/app/components/userlist/deleteUser.php",
+		"/C/xampp/htdocs/sessor/app/components/userlist/getUsers.php",
+		"/C/xampp/htdocs/sessor/app/components/userlist/userlistFactory.js",
+		"/C/xampp/htdocs/sessor/app/components/user/user_template.html",
+		"/C/xampp/htdocs/sessor/app/components/userlist/userlistController.js",
+		"/C/Users/Joe/AppData/Local/Temp/scp22844/httpdocs/tsr/updatelogtable.php",
+		"/C/xampp/htdocs/sessor/app/components/userlist/addUser.php",
+		"/C/rubydevkit/config.yml",
+		"/C/xampp/htdocs/sessor/app/components/userlist/userlist_template.html",
+		"/C/xampp/htdocs/sessor/app/components/userlist/userlistDirectives.js",
+		"/C/xampp/htdocs/sessor/app/components/connect.php",
+		"/C/xampp/htdocs/sessor/app/components/userlist/getUser.php",
+		"/C/xampp/htdocs/sessor/app/components/userlist/user_template.html",
+		"/C/xampp/htdocs/sessor/app/components/userlist/updateUser.php",
+		"/C/xampp/htdocs/sessor/app/components/home/getPages",
+		"/C/xampp/htdocs/sessor/app/shared/reportlist/reportlistDirective.js",
+		"/C/xampp/htdocs/sessor/app/components/home/homeDirective.js",
+		"/C/xampp/htdocs/sessor/app/components/home/homeController.js",
+		"/C/xampp/htdocs/sessor/app/components/home/homeFactory.js",
+		"/C/xampp/htdocs/sessor/app/components/home/homepage.html",
+		"/C/xampp/htdocs/sessor/app/components/home/page_template.html",
+		"/C/sessor2/public/index.html",
+		"/C/xampp/htdocs/sessor/app/components/home/page_2.json",
+		"/C/xampp/htdocs/sessor/app/components/home/page_0.json",
+		"/C/xampp/htdocs/sessor/app/components/home/page_1.json",
+		"/C/xampp/htdocs/sessor/src/sessor.js",
+		"/C/xampp/htdocs/sessor/src/controller.js",
+		"/C/xampp/htdocs/sessor/src/factory.js",
+		"/C/xampp/htdocs/sessor/app/components/home/homeFactory",
+		"/C/xampp/htdocs/sessor/src/pages.json",
+		"/C/xampp/htdocs/sessor/app/shared/reportlist/reportlistView.html",
+		"/C/xampp/htdocs/sessor/main.html",
+		"/C/xampp/htdocs/sessor/index.html",
+		"/C/xampp/htdocs/sessor/sessor.js",
+		"/C/xampp/htdocs/sessor/1.txt",
+		"/C/Users/Joe/AppData/Local/Temp/scp51044/httpdocs/test_wp/canvas_connect.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp02989/httpdocs/tsr/submit/index.php",
+		"/C/xampp/htdocs/testGit/login.html",
+		"/C/xampp/htdocs/testGit/index.html",
+		"/C/Users/Joe/AppData/Local/Temp/scp38515/httpdocs/online/wp-content/plugins/wp-oauth/wp-oauth.js",
+		"/C/Users/Joe/AppData/Local/Temp/scp58950/httpdocs/tsr/edit_report.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp30349/httpdocs/online/wp-login.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp15282/httpdocs/online/wp-content/plugins/easy_report/options.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp53041/httpdocs/tsr/submit/index.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp42440/httpdocs/tsr/submit/index.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp37286/httpdocs/online/wp-content/plugins/wp-oauth/wp-oauth-settings.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp25169/httpdocs/online/wp-content/plugins/wp-oauth/login-google.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp28400/httpdocs/online/wp-content/plugins/wp-oauth/wp-oauth.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp56472/httpdocs/online/wp-content/plugins/easy_report/canvas_connect.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp37249/.htaccess",
+		"/C/Users/Joe/AppData/Local/Temp/scp57026/httpdocs/tsr/reports.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp00346/httpdocs/online/wp-admin/options-general.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp58115/httpdocs/online/wp-content/plugins/easy_report/easy_report.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp43913/httpdocs/online/wp-content/plugins/easy_report/options.php",
+		"/C/Users/Joe/AppData/Local/Temp/Temp1_thing_2015-04-01_060946.zip/database/migrations/2015_04_01_060946_create_Courses_table.php",
+		"/C/Users/Joe/AppData/Local/Temp/Temp1_thing_2015-04-01_061053.zip/app/Http/routes.php",
+		"/C/Users/Joe/AppData/Local/Temp/Temp1_thing_2015-04-01_061053.zip/app/Http/Controllers/teacherController.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp30254/httpdocs/tsr/submit/index.php",
+		"/C/Users/Joe/AppData/Local/Temp/scp22034/httpdocs/tsr/reports.php",
+		"/C/xampp/htdocs/xampp/core/cont/appl/repo/talk/talktranscript.php",
+		"/C/xampp/htdocs/xampp/evaluation.php",
+		"/C/xampp/htdocs/xampp/core/cont/appl/repo/talk/talkprocess.php",
+		"/C/xampp/htdocs/xampp/phonebook.php",
+		"/C/xampp/htdocs/xampp/core/res/includes/database.inc.php",
+		"/C/xampp/htdocs/xampp/core/cont/appl/repo/talk/talktable.php",
+		"/C/xampp/htdocs/xampp/core/cont/acco/settings.php",
+		"/C/xampp/htdocs/index.html",
+		"/C/xampp/htdocs/xampp/navi.php",
+		"/C/xampp/phpMyAdmin/config.inc.php",
+		"/C/xampp/cgi-bin/perltest.cgi",
+		"/C/xampp/security/htdocs/.htaccess",
+		"/C/xampp/security/xampp.users",
+		"/C/xampp/htdocs/xampp/.htaccess",
+		"/C/xampp/htdocs/xampp/sqlite/cdcol",
+		"/C/xampp/htdocs/xampp/lang.php",
+		"/C/xampp/htdocs/index.php",
+		"/D/slccswc/core/tsr/writers/index.php",
+		"/C/xampp/htdocs/xampp/core/content/account/setwrite.php",
+		"/C/xampp/htdocs/xampp/core/content/applications/evaluation/evaluation.php",
+		"/C/xampp/htdocs/xampp/lang/languages.php",
+		"/C/xampp/htdocs/xampp/langsettings.php",
+		"/C/xampp/htdocs/xampp/lang.tmp",
+		"/D/slccswc/core/index.php",
+		"/D/slccswc/core/tsr/applications/scheduler/display/scheduleoldlocation.php",
+		"/D/slccswc/core/tsr/applications/scheduler/new-schedule.php",
+		"/D/slccswc/core/tsr/applications/search/index.php",
+		"/D/slccswc/core/tsr/tools/writers/searchrep.php",
+		"/D/slccswc/core/tsr/tools/acct/setwritewrong.php",
+		"/D/slccswc/core/tsr/apps/turnpage.php",
+		"/D/slccswc/core/tsr/slideshow/fadetest.php",
+		"/D/slccswc/core/tsr/reporting/collection/appointments/index.php",
+		"/D/slccswc/core/tsr/writers.php",
+		"/D/slccswc/core/tsr/sep.php",
+		"/D/slccswc/core/tsr/student_edit_report.php",
+		"/D/slccswc/core/tsr/sysacc.php",
+		"/D/slccswc/core/tsr/schedprintworks.php",
+		"/D/slccswc/core/tsr/mailtest.php",
+		"/D/slccswc/core/tsr/onlinenow.php",
+		"/D/slccswc/core/tsr/processor.inc.php",
+		"/D/slccswc/core/tsr/inperson.php",
+		"/D/slccswc/core/tsr/discuss.php",
+		"/D/slccswc/core/tsr/Library_Square_schedule.php",
+		"/D/slccswc/core/tsr/email.php",
+		"/D/slccswc/core/tsr/delete_report.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Data",
+			" <td><input type=\"hidden\" ng-model=\"topuser.id\" value=\"{{topuser.id}}\" /></td>\n          <td><input class=\"form-control\" id=\"update-firstname\" ng-model=\"topuser.firstname\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"topuser.lastname\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"topuser.email\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"query\" placeholder=\"Search...\" autofocus /></td>\n          <td>&nbsp;</td>",
+			"user",
+			"d",
+			"_",
+			"home",
+			"4",
+			"$URL",
+			"output",
+			"$curl",
+			"my-setting-admin",
+			"-",
+			"option",
+			"test-plugin",
+			"er_set",
+			"plugin",
+			"TEXT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/sessor/sessor-ruby.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true
+}
