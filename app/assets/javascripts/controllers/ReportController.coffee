@@ -1,6 +1,7 @@
 controllers = angular.module('controllers')
-controllers.controller("ReportController", [ '$scope', '$routeParams', '$resource', 'flash'
-	($scope,$routeParams,$resource,flash)->
+controllers.controller("ReportController", [ '$scope', '$routeParams', '$resource', '$location', 'flash'
+	($scope, $routeParams, $resource, $location, flash)->
+
 		Report = $resource('/reports/:reportId', { reportId: "@id", format: 'json' })
 
 		Report.get({reportId: $routeParams.reportId},
@@ -8,6 +9,10 @@ controllers.controller("ReportController", [ '$scope', '$routeParams', '$resourc
 			( (httpResponse)-> 
 				$scope.report = null 
 				flash.error = "There is no report with ID #{$routeParams.reportId}" 
+				console.log 'no'
 			)
 		)
+
+		$scope.back = -> $location.path("/")
+
 ])

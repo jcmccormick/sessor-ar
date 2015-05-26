@@ -47,7 +47,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sass', '3.2.19'
 group :development, :test do
 
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "3.2.1"
 	gem "factory_girl_rails", "~> 4.0"
 	gem "capybara"
 	gem "database_cleaner"

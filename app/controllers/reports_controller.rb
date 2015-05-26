@@ -6,4 +6,8 @@ class ReportsController < ApplicationController
                  []
                end
   end
+
+  def show
+  	@report = Report.find(params[:id]) or not_found
+  end
 end

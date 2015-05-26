@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   
   root 'home#index'
 
-  resources :reports, only: [:index]
+  resources :reports, only: [:index, :show]
 
 end

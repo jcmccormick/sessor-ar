@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Repor",
+				"Report"
+			],
+			[
+				"Report",
+				"Report"
+			],
+			[
 				"user",
 				"userId"
 			],
@@ -15,6 +23,107 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/assets/javascripts/controllers/ReportController.coffee",
+			"settings":
+			{
+				"buffer_size": 481,
+				"line_ending": "Windows",
+				"name": "controllers = angular.module('controllers')"
+			}
+		},
+		{
+			"file": "spec/javascripts/controllers/ReportController_spec.coffee",
+			"settings":
+			{
+				"buffer_size": 1568,
+				"line_ending": "Windows",
+				"name": "describe \"ReportController\", ->"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/controllers/ReportsController.coffee",
+			"settings":
+			{
+				"buffer_size": 500,
+				"line_ending": "Windows",
+				"name": "controllers = angular.module('controllers',[])"
+			}
+		},
+		{
+			"file": "spec/javascripts/controllers/ReportsController_spec.coffee",
+			"settings":
+			{
+				"buffer_size": 1863,
+				"line_ending": "Windows",
+				"name": "describe \"ReportsController\", ->"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 106,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/reports_controller.rb",
+			"settings":
+			{
+				"buffer_size": 290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/controllers/reports_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1963,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/features/view_spec.rb",
+			"settings":
+			{
+				"buffer_size": 715,
+				"line_ending": "Windows",
+				"name": "require 'spec_helper.rb'"
+			}
+		},
+		{
+			"file": "spec/spec_helper.rb",
+			"settings":
+			{
+				"buffer_size": 1147,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 1054,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -40,6 +149,32 @@
 	},
 	"file_history":
 	[
+		"/C/Ruby/lib/ruby/gems/2.1.0/gems/rspec-rails-3.2.1/.document",
+		"/C/xampp/htdocs/sessor-ar/app/views/reports/show.json.jbuilder",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/app.coffee",
+		"/C/xampp/htdocs/sessor-ar/Gemfile",
+		"/C/xampp/htdocs/sessor-ar/spec/javascripts/spec_helper.coffee",
+		"/C/xampp/htdocs/sessor-ar/config/initializers/assets.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/features/search_spec.rb",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/application.js",
+		"/C/xampp/htdocs/sessor-ar/Bowerfile",
+		"/C/xampp/htdocs/sessor-ar/config/routes.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/javascripts/controllers/ReportController_spec.coffee",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/templates/index.html",
+		"/C/xampp/htdocs/sessor-ar/vendor/assets/bower_components/angular/angular.js",
+		"/C/xampp/htdocs/sessor-ar/spec/controllers/reports_controller_spec.rb",
+		"/C/xampp/htdocs/sessor-ar/app/views/reports/_report.json.jbuilder",
+		"/C/xampp/htdocs/sessor-ar/app/views/reports/index.json.jbuilder",
+		"/C/xampp/htdocs/sessor-ar/app/controllers/reports_controller.rb",
+		"/C/xampp/htdocs/sessor-ar/app/views/home/index.html.erb",
+		"/C/xampp/htdocs/sessor-ar/spec/spec_helper.rb",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/index.html",
+		"/C/xampp/htdocs/sessor-ar/config/application.rb",
+		"/C/xampp/htdocs/sessor-ar/app/views/layouts/application.html.erb",
+		"/C/xampp/htdocs/sessor-ar/app/controllers/home_controller.rb",
+		"/C/xampp/htdocs/sessor-ar/app/assets/stylesheets/application.css.scss",
+		"/C/xampp/htdocs/sessor-ar/config/database.yml",
+		"/C/xampp/htdocs/sessor-ar/vendor/Bowerfile",
 		"/C/xampp/htdocs/sessor/app/components/home/menuController.js",
 		"/C/xampp/htdocs/sessor/app/components/home/menuFactory.js",
 		"/C/xampp/htdocs/sessor/app/components/menu/menuFactory.js",
@@ -141,25 +276,7 @@
 		"/D/slccswc/core/index.php",
 		"/D/slccswc/core/tsr/applications/scheduler/display/scheduleoldlocation.php",
 		"/D/slccswc/core/tsr/applications/scheduler/new-schedule.php",
-		"/D/slccswc/core/tsr/applications/search/index.php",
-		"/D/slccswc/core/tsr/tools/writers/searchrep.php",
-		"/D/slccswc/core/tsr/tools/acct/setwritewrong.php",
-		"/D/slccswc/core/tsr/apps/turnpage.php",
-		"/D/slccswc/core/tsr/slideshow/fadetest.php",
-		"/D/slccswc/core/tsr/reporting/collection/appointments/index.php",
-		"/D/slccswc/core/tsr/writers.php",
-		"/D/slccswc/core/tsr/sep.php",
-		"/D/slccswc/core/tsr/student_edit_report.php",
-		"/D/slccswc/core/tsr/sysacc.php",
-		"/D/slccswc/core/tsr/schedprintworks.php",
-		"/D/slccswc/core/tsr/mailtest.php",
-		"/D/slccswc/core/tsr/onlinenow.php",
-		"/D/slccswc/core/tsr/processor.inc.php",
-		"/D/slccswc/core/tsr/inperson.php",
-		"/D/slccswc/core/tsr/discuss.php",
-		"/D/slccswc/core/tsr/Library_Square_schedule.php",
-		"/D/slccswc/core/tsr/email.php",
-		"/D/slccswc/core/tsr/delete_report.php"
+		"/D/slccswc/core/tsr/applications/search/index.php"
 	],
 	"find":
 	{
@@ -167,9 +284,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"C:\\xampp\\htdocs\\sessor-ar\\app",
+			"C:\\xampp\\htdocs\\sessor-ar"
 		]
 	},
 	"find_state":
@@ -177,6 +296,23 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"cipe",
+			"recipe",
+			"Recipe",
+			"recipe",
+			"Recipe",
+			"development.rb",
+			"recipes",
+			"RecipesController",
+			"RecipeController",
+			"Recipes",
+			"recipes",
+			"Recipe",
+			"recipe",
+			"RecipesController",
+			"Recipes",
+			"turbo",
+			"coffee",
 			"Data",
 			" <td><input type=\"hidden\" ng-model=\"topuser.id\" value=\"{{topuser.id}}\" /></td>\n          <td><input class=\"form-control\" id=\"update-firstname\" ng-model=\"topuser.firstname\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"topuser.lastname\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"topuser.email\" required /></td>\n          <td><input class=\"form-control\" ng-model=\"query\" placeholder=\"Search...\" autofocus /></td>\n          <td>&nbsp;</td>",
 			"user",
@@ -205,14 +341,350 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
+			"selected": 11,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/assets/javascripts/controllers/ReportController.coffee",
+					"settings":
+					{
+						"buffer_size": 481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"auto_name": "controllers = angular.module('controllers')",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/javascripts/controllers/ReportController_spec.coffee",
+					"settings":
+					{
+						"buffer_size": 1568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1546,
+								1546
+							],
+							[
+								1563,
+								1563
+							]
+						],
+						"settings":
+						{
+							"auto_name": "describe \"ReportController\", ->",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/controllers/ReportsController.coffee",
+					"settings":
+					{
+						"buffer_size": 500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
+							]
+						],
+						"settings":
+						{
+							"auto_name": "controllers = angular.module('controllers',[])",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "spec/javascripts/controllers/ReportsController_spec.coffee",
+					"settings":
+					{
+						"buffer_size": 1863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1153,
+								1153
+							]
+						],
+						"settings":
+						{
+							"auto_name": "describe \"ReportsController\", ->",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/reports_controller.rb",
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "spec/controllers/reports_controller_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1774,
+								1774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/application_controller.rb",
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1249,
+								1249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "spec/features/view_spec.rb",
+					"settings":
+					{
+						"buffer_size": 715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"auto_name": "require 'spec_helper.rb'",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "spec/spec_helper.rb",
+					"settings":
+					{
+						"buffer_size": 1147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/assets/javascripts/templates/index.html",
+					"settings":
+					{
+						"buffer_size": 1054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								827,
+								827
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -267,7 +739,7 @@
 		[
 			[
 				"",
-				"/C/sessor/sessor-ruby.sublime-project"
+				"/C/xampp/htdocs/sessor/sessor-sublime.sublime-project"
 			]
 		],
 		"width": 380.0

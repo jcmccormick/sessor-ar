@@ -44,4 +44,29 @@ describe ReportsController do
 
   end
 
+  describe "show" do
+    before do
+      xhr :get, :show, format: :json, id: report_id
+    end
+
+    subject(:results) { JSON.parse(response.body) }
+
+    context "when the report exists" do
+      let(:report) {
+        Report.create!(name: 'Baked Potato w/ Cheese',
+               submission: "Eat the cheese.")
+      }
+      let(:report_id) { report_id }
+
+      it { expect(response.status).to eq(200) }
+      it { expect(results["id"]).to eq(report.id) }
+      it { expect(results["name"]).to eq(report.name) }
+      it { expect(results["submission"]).to eq(report.submission) }
+    end
+
+    context "when the report does not exist" do
+      let(:report_id) { -9999 }
+      it { expect(response.status).to eq(404) }
+    end
+  end
 end
