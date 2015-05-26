@@ -4,6 +4,7 @@ describe "ReportController", ->
   routeParams  = null
   httpBackend  = null
   flash        = null
+  location     = null
   reportId     = 42
 
   fakeReport   =
@@ -11,21 +12,22 @@ describe "ReportController", ->
     name: "Baked Potatoes"
     submission: "Pierce potato with fork, nuke for 20 minutes"
 
-  setupController =(reportExists=true)->
+  setupController =(reportExists=true, reportId=42)->
     inject(($location, $routeParams, $rootScope, $httpBackend, $controller, _flash_)->
       scope       = $rootScope.$new()
       location    = $location
       httpBackend = $httpBackend
       routeParams = $routeParams
-      routeParams.reportId = reportId
+      routeParams.reportId = reportId if reportId
       flash = _flash_
 
-      request = new RegExp("\/reports/#{reportId}")
-      results = if reportExists
-        [200,fakeReport]
-      else
-        [404]
-      httpBackend.expectGET(request).respond(results[0],results[1])
+      if reportId
+        request = new RegExp("\/reports/#{reportId}")
+        results = if reportExists
+          [200,fakeReport]
+        else
+          [404]
+        httpBackend.expectGET(request).respond(results[0],results[1])
       ctrl        = $controller('ReportController',
                                 $scope: scope)
     )

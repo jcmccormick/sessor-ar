@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ReportsController do
-
   render_views
   describe "index" do
     before do
@@ -56,7 +55,7 @@ describe ReportsController do
         Report.create!(name: 'Baked Potato w/ Cheese',
                submission: "Eat the cheese.")
       }
-      let(:report_id) { report_id }
+      let(:report_id) { report.id }
 
       it { expect(response.status).to eq(200) }
       it { expect(results["id"]).to eq(report.id) }
@@ -68,5 +67,42 @@ describe ReportsController do
       let(:report_id) { -9999 }
       it { expect(response.status).to eq(404) }
     end
+  end
+
+  describe "create" do
+    before do
+      xhr :post, :create, format: :json, report: { name: "Toast", 
+                                           submission: "Add bread to toaster, push lever" }
+    end
+    it { expect(response.status).to eq(201) }
+    it { expect(Report.last.name).to eq("Toast") }
+    it { expect(Report.last.submission).to eq("Add bread to toaster, push lever") }
+  end
+
+  describe "update" do
+    let(:report) { 
+      Report.create!(name: 'Baked Potato w/ Cheese', 
+                     submission: "Nuke for 20 minutes; top with cheese") 
+    }
+    before do
+      xhr :put, :update, format: :json, id: report.id, report: { name: "Toast", 
+                                                 submission: "Add bread to toaster, push lever" }
+      report.reload
+    end
+    it { expect(response.status).to eq(204) }
+    it { expect(report.name).to eq("Toast") }
+    it { expect(report.submission).to eq("Add bread to toaster, push lever") }
+  end
+
+  describe "destroy" do
+    let(:report_id) { 
+      Report.create!(name: 'Baked Potato w/ Cheese', 
+                     submission: "Nuke for 20 minutes; top with cheese").id
+    }
+    before do
+      xhr :delete, :destroy, format: :json, id: report_id
+    end
+    it { expect(response.status).to eq(204) }
+    it { expect(Report.find_by_id(report_id)).to be_nil }
   end
 end

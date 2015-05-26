@@ -8,8 +8,7 @@ controllers.controller("ReportController", [ '$scope', '$routeParams', '$resourc
 			( (report)-> $scope.report = report ),
 			( (httpResponse)-> 
 				$scope.report = null 
-				flash.error = "There is no report with ID #{$routeParams.reportId}" 
-				console.log 'no'
+				flash.error = "There is no report with ID #{$routeParams.reportId}"
 			)
 		)
 
