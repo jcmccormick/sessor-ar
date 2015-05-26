@@ -24,103 +24,75 @@
 	"buffers":
 	[
 		{
-			"file": "app/assets/javascripts/controllers/ReportController.coffee",
+			"file": "app/assets/javascripts/app.coffee",
 			"settings":
 			{
-				"buffer_size": 481,
-				"line_ending": "Windows",
-				"name": "controllers = angular.module('controllers')"
-			}
-		},
-		{
-			"file": "spec/javascripts/controllers/ReportController_spec.coffee",
-			"settings":
-			{
-				"buffer_size": 1568,
-				"line_ending": "Windows",
-				"name": "describe \"ReportController\", ->"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/controllers/ReportsController.coffee",
-			"settings":
-			{
-				"buffer_size": 500,
-				"line_ending": "Windows",
-				"name": "controllers = angular.module('controllers',[])"
-			}
-		},
-		{
-			"file": "spec/javascripts/controllers/ReportsController_spec.coffee",
-			"settings":
-			{
-				"buffer_size": 1863,
-				"line_ending": "Windows",
-				"name": "describe \"ReportsController\", ->"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 106,
-				"line_ending": "Unix"
+				"buffer_size": 1084,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/controllers/reports_controller.rb",
 			"settings":
 			{
-				"buffer_size": 290,
+				"buffer_size": 754,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/controllers/reports_controller_spec.rb",
+			"file": "app/assets/javascripts/templates/reports.html",
 			"settings":
 			{
-				"buffer_size": 1963,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 205,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 1767,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/features/view_spec.rb",
-			"settings":
-			{
-				"buffer_size": 715,
-				"line_ending": "Windows",
-				"name": "require 'spec_helper.rb'"
-			}
-		},
-		{
-			"file": "spec/spec_helper.rb",
-			"settings":
-			{
-				"buffer_size": 1147,
+				"buffer_size": 1087,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/templates/edit_report.html",
+			"settings":
+			{
+				"buffer_size": 1258,
+				"line_ending": "Windows",
+				"name": "<aside class=\"flash row\">"
 			}
 		},
 		{
 			"file": "app/assets/javascripts/templates/index.html",
 			"settings":
 			{
-				"buffer_size": 1054,
+				"buffer_size": 3,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/controllers/ReportController.coffee",
+			"settings":
+			{
+				"buffer_size": 1310,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/controllers/ReportsController.coffee",
+			"settings":
+			{
+				"buffer_size": 754,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/templates/show_report.html",
+			"settings":
+			{
+				"buffer_size": 755,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/home/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 156,
 				"line_ending": "Windows"
 			}
 		}
@@ -149,25 +121,33 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/sessor-ar/spec/controllers/reports_controller_spec.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/javascripts/controllers/ReportController_spec.coffee",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/controllers/ReportController.coffee",
+		"/C/xampp/htdocs/sessor-ar/spec/features/view_spec.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/features/edit_spec.rb",
+		"/C/xampp/htdocs/sessor-ar/app/controllers/application_controller.rb",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/app.coffee",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/templates/show.html",
+		"/C/xampp/htdocs/sessor-ar/config/routes.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/teaspoon_env.rb",
+		"/C/xampp/htdocs/sessor-ar/Gemfile",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/templates/index.html",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/controllers/ReportsController.coffee",
+		"/C/xampp/htdocs/sessor-ar/app/controllers/reports_controller.rb",
+		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/application.js",
+		"/C/xampp/htdocs/sessor-ar/app/views/reports/_report.json.jbuilder",
+		"/C/xampp/htdocs/sessor-ar/spec/spec_helper.rb",
+		"/C/xampp/htdocs/sessor-ar/spec/javascripts/controllers/ReportsController_spec.coffee",
 		"/C/Ruby/lib/ruby/gems/2.1.0/gems/rspec-rails-3.2.1/.document",
 		"/C/xampp/htdocs/sessor-ar/app/views/reports/show.json.jbuilder",
-		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/app.coffee",
-		"/C/xampp/htdocs/sessor-ar/Gemfile",
 		"/C/xampp/htdocs/sessor-ar/spec/javascripts/spec_helper.coffee",
 		"/C/xampp/htdocs/sessor-ar/config/initializers/assets.rb",
 		"/C/xampp/htdocs/sessor-ar/spec/features/search_spec.rb",
-		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/application.js",
 		"/C/xampp/htdocs/sessor-ar/Bowerfile",
-		"/C/xampp/htdocs/sessor-ar/config/routes.rb",
-		"/C/xampp/htdocs/sessor-ar/spec/javascripts/controllers/ReportController_spec.coffee",
-		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/templates/index.html",
 		"/C/xampp/htdocs/sessor-ar/vendor/assets/bower_components/angular/angular.js",
-		"/C/xampp/htdocs/sessor-ar/spec/controllers/reports_controller_spec.rb",
-		"/C/xampp/htdocs/sessor-ar/app/views/reports/_report.json.jbuilder",
 		"/C/xampp/htdocs/sessor-ar/app/views/reports/index.json.jbuilder",
-		"/C/xampp/htdocs/sessor-ar/app/controllers/reports_controller.rb",
 		"/C/xampp/htdocs/sessor-ar/app/views/home/index.html.erb",
-		"/C/xampp/htdocs/sessor-ar/spec/spec_helper.rb",
 		"/C/xampp/htdocs/sessor-ar/app/assets/javascripts/index.html",
 		"/C/xampp/htdocs/sessor-ar/config/application.rb",
 		"/C/xampp/htdocs/sessor-ar/app/views/layouts/application.html.erb",
@@ -268,15 +248,7 @@
 		"/C/xampp/htdocs/xampp/lang.php",
 		"/C/xampp/htdocs/index.php",
 		"/D/slccswc/core/tsr/writers/index.php",
-		"/C/xampp/htdocs/xampp/core/content/account/setwrite.php",
-		"/C/xampp/htdocs/xampp/core/content/applications/evaluation/evaluation.php",
-		"/C/xampp/htdocs/xampp/lang/languages.php",
-		"/C/xampp/htdocs/xampp/langsettings.php",
-		"/C/xampp/htdocs/xampp/lang.tmp",
-		"/D/slccswc/core/index.php",
-		"/D/slccswc/core/tsr/applications/scheduler/display/scheduleoldlocation.php",
-		"/D/slccswc/core/tsr/applications/scheduler/new-schedule.php",
-		"/D/slccswc/core/tsr/applications/search/index.php"
+		"/C/xampp/htdocs/xampp/core/content/account/setwrite.php"
 	],
 	"find":
 	{
@@ -287,6 +259,9 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\xampp\\htdocs\\sessor-ar\\config",
+			"C:\\xampp\\htdocs\\sessor-ar\\app",
+			"C:\\xampp\\htdocs\\sessor-ar",
 			"C:\\xampp\\htdocs\\sessor-ar\\app",
 			"C:\\xampp\\htdocs\\sessor-ar"
 		]
@@ -296,6 +271,24 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\"/\"",
+			"'/'",
+			"\"/\"",
+			"'/'",
+			"\"/\"",
+			"row",
+			"cipe",
+			"instructions",
+			"cipe",
+			"+",
+			"cipe",
+			"instructions",
+			"cipe",
+			"instructions",
+			"cipe",
+			"instructions",
+			"cipe",
+			"instructions",
 			"cipe",
 			"recipe",
 			"Recipe",
@@ -347,29 +340,30 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/javascripts/controllers/ReportController.coffee",
+					"file": "app/assets/javascripts/app.coffee",
 					"settings":
 					{
-						"buffer_size": 481,
+						"buffer_size": 1084,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								477,
-								477
+								585,
+								585
 							]
 						],
 						"settings":
 						{
-							"auto_name": "controllers = angular.module('controllers')",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -379,28 +373,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "spec/javascripts/controllers/ReportController_spec.coffee",
+					"file": "app/controllers/reports_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1568,
+						"buffer_size": 754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1546,
-								1546
-							],
-							[
-								1563,
-								1563
+								580,
+								580
 							]
 						],
 						"settings":
 						{
-							"auto_name": "describe \"ReportController\", ->",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -412,24 +401,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/assets/javascripts/controllers/ReportsController.coffee",
+					"file": "app/assets/javascripts/templates/reports.html",
 					"settings":
 					{
-						"buffer_size": 500,
+						"buffer_size": 1087,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								353,
-								353
+								667,
+								667
 							]
 						],
 						"settings":
 						{
-							"auto_name": "controllers = angular.module('controllers',[])",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -439,24 +429,24 @@
 				},
 				{
 					"buffer": 3,
-					"file": "spec/javascripts/controllers/ReportsController_spec.coffee",
+					"file": "app/assets/javascripts/templates/edit_report.html",
 					"settings":
 					{
-						"buffer_size": 1863,
+						"buffer_size": 1258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1153,
-								1153
+								757,
+								757
 							]
 						],
 						"settings":
 						{
-							"auto_name": "describe \"ReportsController\", ->",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"auto_name": "<aside class=\"flash row\">",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -468,23 +458,25 @@
 				},
 				{
 					"buffer": 4,
-					"file": "config/routes.rb",
+					"file": "app/assets/javascripts/templates/index.html",
 					"settings":
 					{
-						"buffer_size": 106,
+						"buffer_size": 3,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								3,
+								3
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -494,23 +486,24 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/reports_controller.rb",
+					"file": "app/assets/javascripts/controllers/ReportController.coffee",
 					"settings":
 					{
-						"buffer_size": 290,
+						"buffer_size": 1310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								277
+								692,
+								692
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -520,51 +513,51 @@
 				},
 				{
 					"buffer": 6,
-					"file": "spec/controllers/reports_controller_spec.rb",
+					"file": "app/assets/javascripts/controllers/ReportsController.coffee",
 					"settings":
 					{
-						"buffer_size": 1963,
+						"buffer_size": 754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1774,
-								1774
+								282,
+								282
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 312.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "app/controllers/application_controller.rb",
+					"file": "app/assets/javascripts/templates/show_report.html",
 					"settings":
 					{
-						"buffer_size": 205,
+						"buffer_size": 755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								749,
+								749
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -574,110 +567,23 @@
 				},
 				{
 					"buffer": 8,
-					"file": "Gemfile",
+					"file": "app/views/home/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1767,
+						"buffer_size": 156,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1249,
-								1249
+								81,
+								81
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "spec/features/view_spec.rb",
-					"settings":
-					{
-						"buffer_size": 715,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"auto_name": "require 'spec_helper.rb'",
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "spec/spec_helper.rb",
-					"settings":
-					{
-						"buffer_size": 1147,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								187,
-								187
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/assets/javascripts/templates/index.html",
-					"settings":
-					{
-						"buffer_size": 1054,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								827,
-								827
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -748,6 +654,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
+	"side_bar_width": 158.0,
 	"status_bar_visible": true
 }

@@ -20,13 +20,13 @@ controllers.controller("ReportController", [ '$scope', '$routeParams', '$resourc
 		else
 			$scope.report = {}
 
-		$scope.back   = -> $location.path("/")
+		$scope.back   = -> $location.path("/reports")
 		$scope.edit   = -> $location.path("/reports/#{$scope.report.id}/edit")
 		$scope.cancel = ->
 			if $scope.report.id
 				$location.path("/reports/#{$scope.report.id}")
 			else
-				$location.path("/")
+				$location.path("/reports")
 
 		$scope.save = ->
 			onError = (_httpResponse)-> flash.error = "Something went wrong"

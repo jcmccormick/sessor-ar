@@ -5,12 +5,12 @@ class ReportsController < ApplicationController
   	@reports = if params[:keywords]
                  Report.where('name like ?',"%#{params[:keywords]}%")
                else
-                 []
+                 Report.all.each
                end
   end
 
   def show
-  	@report = Report.find(params[:id]) or not_found
+  	@report = Report.find(params[:id])
   end
 
   def create

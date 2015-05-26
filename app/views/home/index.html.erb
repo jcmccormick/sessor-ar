@@ -1,5 +1,12 @@
 <div ng-app="sessor">
-  <div class="view-container">
-    <div ng-view class="view-frame animate-view"></div>
-  </div>
+	<section ng-controller="NavController" class="container">
+		<div class="pull-left h1">Sessor</div>
+		<div class="pull-right">
+			<button ng-click="home()" class="btn btn-default">Home</button>
+			<button ng-click="reports()" class="btn btn-default">Reports</button>
+		</div>
+	</section>
+	<div class="container">
+		<div ng-view class="view-frame animate-view"></div>
+	</div>
 </div>
