@@ -1,6 +1,7 @@
 sessor = angular.module('sessor', [
   'templates',
   'ngRoute',
+  'ngResource',
   'controllers'
 ])
 
@@ -33,8 +34,8 @@ reports = [
 ]
 
 controllers = angular.module('controllers',[])
-controllers.controller("ReportsController", [ '$scope', '$routeParams', '$location',
-	($scope, $routeParams, $location)->
+controllers.controller("ReportsController", [ '$scope', '$routeParams', '$location', '$resource',
+	($scope, $routeParams, $location, $resource)->
 		$scope.search = (keywords)->  $location.path("/").search('keywords',keywords)
 		if $routeParams.keywords
 			keywords = $routeParams.keywords.toLowerCase()

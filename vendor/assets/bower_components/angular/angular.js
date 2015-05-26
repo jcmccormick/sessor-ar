@@ -1952,7 +1952,7 @@ function setupModuleLoader(window) {
            * @description
            * Use this method to register work which needs to be performed on module loading.
            * For more about how to configure services, see
-           * {@link providers#provider-recipe Provider Recipe}.
+           * {@link providers#provider-report Provider Report}.
            */
           config: config,
 
