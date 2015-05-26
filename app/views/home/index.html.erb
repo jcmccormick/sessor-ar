@@ -1,6 +1,13 @@
 <div ng-app="sessor">
 	<section ng-controller="NavController" class="container">
 		<div class="pull-left h1">Sessor</div>
+
+		<div flash-alert active-class="in" class="alert fade col-xs-4 col-xs-offset-3">
+			<button type="button" class="close" ng-click="hide()">&times;</button>
+		    <strong class="alert-heading">Oops!</strong>
+		    <span class="alert-message">{{flash.message}}</span>
+		</div>
+
 		<div class="pull-right">
 			<button ng-click="home()" class="btn btn-default">Home</button>
 			<button ng-click="reports()" class="btn btn-default">Reports</button>

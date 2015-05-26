@@ -37,8 +37,7 @@ controllers.controller("ReportController", [ '$scope', '$routeParams', '$resourc
 			else
 				Report.create($scope.report,
 					( (newReport)-> $location.path("/reports/#{newReport.id}") ),
-					onError
-				)
+					onError)
 
 		$scope.delete = ->
 			$scope.report.$delete()

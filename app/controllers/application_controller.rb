@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   rescue_from ActiveRecord::RecordNotFound do
     respond_to do |type|
-      type.all  { render :nothing => true, :status => 404 }
+      type.all  { render 'home#index' => true, :status => 404 }
     end
   end
 end

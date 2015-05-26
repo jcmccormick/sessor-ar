@@ -14,14 +14,14 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.new(params.require(:report).permit(:name,:submission))
+    @report = Report.new(allowed_params)
     @report.save
     render 'show', status: 201
   end
 
   def update
     report = Report.find(params[:id])
-    report.update_attributes(params.require(:report).permit(:name,:submission))
+    report.update_attributes(allowed_params)
     head :no_content
   end
 
@@ -30,4 +30,9 @@ class ReportsController < ApplicationController
     report.destroy
     head :no_content
   end
+
+  private
+    def allowed_params
+      params.require(:report).permit(:name, :submission, :response)
+    end
 end
