@@ -2,6 +2,8 @@ sessor = angular.module('sessor', [
   'templates',
   'ngRoute',
   'ngResource',
+  'angular-flash.service',
+  'angular-flash.flash-alert-directive',
   'controllers'
 ])
 
@@ -11,35 +13,10 @@ sessor.config([ '$routeProvider',
       .when('/',
         templateUrl: "index.html"
         controller: 'ReportsController'
+      ).when('/reports/:reportId',
+        templateURL: "show.html",
+        controller: 'ReportController'
       )
 ])
 
-reports = [
-	{
-		id: 1
-		name: 'Baked Potato w/ Cheese'
-	},
-	{
-		id: 2
-		name: 'Garlic Mashed Potatoes',
-	},
-	{
-		id: 3
-		name: 'Potatoes Au Gratin',
-	},
-	{
-	    id: 4
-	    name: 'Baked Brussel Sprouts',
-	}
-]
-
 controllers = angular.module('controllers',[])
-controllers.controller("ReportsController", [ '$scope', '$routeParams', '$location', '$resource',
-	($scope, $routeParams, $location, $resource)->
-		$scope.search = (keywords)->  $location.path("/").search('keywords',keywords)
-		if $routeParams.keywords
-			keywords = $routeParams.keywords.toLowerCase()
-			$scope.reports = reports.filter (report)-> report.name.toLowerCase().indexOf(keywords) != -1
-		else
-			$scope.reports = []
-])
