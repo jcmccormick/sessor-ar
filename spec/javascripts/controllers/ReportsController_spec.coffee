@@ -5,7 +5,7 @@ describe "ReportsController", ->
   routeParams  = null
   resource     = null
 
-  setupController =(keywords)->
+  setupController = (keywords)->
     inject(($location, $routeParams, $rootScope, $resource, $controller)->
       scope       = $rootScope.$new()
       location    = $location
@@ -22,4 +22,4 @@ describe "ReportsController", ->
   beforeEach(setupController())
 
   it 'defaults to no reports', ->
-    expect(scope.reports).toEqualData([])
+    expect(scope.reports).toEqual([])
