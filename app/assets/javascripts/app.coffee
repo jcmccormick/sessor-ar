@@ -19,8 +19,16 @@ sessor.config([ '$routeProvider', 'flashProvider',
         templateUrl: "index.html"
         controller: 'ReportsController'
       )
+      .when('/reports/new',
+        templateUrl: "form.html"
+        controller: 'ReportController'
+      )
       .when('/reports/:reportId',
-        templateUrl: "show.html",
+        templateUrl: "show.html"
+        controller: 'ReportController'
+      )
+      .when('/reports/:reportId/edit',
+        templateUrl: "form.html"
         controller: 'ReportController'
       )
 ])

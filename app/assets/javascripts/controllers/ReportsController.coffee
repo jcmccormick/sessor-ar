@@ -9,5 +9,7 @@ controllers.controller("ReportsController", [ '$scope', '$routeParams', '$locati
 		else
 			$scope.reports = []
 
-		$scope.view = (reportId)-> $location.path("/reports/#{reportId}")
+		$scope.view      = (reportId)-> $location.path("/reports/#{reportId}")
+		$scope.newReport = -> $location.path("/reports/new")
+		$scope.edit      = (reportId)-> $location.path("/reports/#{reportId}/edit")
 ])

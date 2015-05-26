@@ -49,3 +49,51 @@ describe "ReportController", ->
         httpBackend.flush()
         expect(scope.report).toBe(null)
         expect(flash.error).toBe("There is no report with ID #{reportId}")
+
+  describe 'create', ->
+    newReport =
+      id: 42
+      name: 'Toast'
+      submission: 'put in toaster, push lever, add butter'
+
+    beforeEach ->
+      setupController(false,false)
+      request = new RegExp("\/reports")
+      httpBackend.expectPOST(request).respond(201,newReport)
+
+    it 'posts to the backend', ->
+      scope.report.name         = newReport.name
+      scope.report.submission = newReport.submission
+      scope.save()
+      httpBackend.flush()
+      expect(location.path()).toBe("/reports/#{newReport.id}")
+
+  describe 'update', ->
+    updatedReport =
+      name: 'Toast'
+      submission: 'put in toaster, push lever, add butter'
+
+    beforeEach ->
+      setupController()
+      httpBackend.flush()
+      request = new RegExp("\/reports")
+      httpBackend.expectPUT(request).respond(204)
+
+    it 'posts to the backend', ->
+      scope.report.name       = updatedReport.name
+      scope.report.submission = updatedReport.submission
+      scope.save()
+      httpBackend.flush()
+      expect(location.path()).toBe("/reports/#{scope.report.id}")
+
+  describe 'delete' ,->
+    beforeEach ->
+      setupController()
+      httpBackend.flush()
+      request = new RegExp("\/reports/#{scope.report.id}")
+      httpBackend.expectDELETE(request).respond(204)
+
+    it 'posts to the backend', ->
+      scope.delete()
+      httpBackend.flush()
+      expect(location.path()).toBe("/")

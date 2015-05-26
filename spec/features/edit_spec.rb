@@ -6,7 +6,7 @@ feature "Creating, editing, and deleting a report", js: true do
     click_on "New Report…"
 
     fill_in "name", with: "Baked Brussel Sprouts"
-    fill_in "instructions", with: "Slather in oil, then bake for 20 minutes"
+    fill_in "submission", with: "Slather in oil, then bake for 20 minutes"
 
     click_on "Save"
 
@@ -16,7 +16,7 @@ feature "Creating, editing, and deleting a report", js: true do
     click_on "Edit"
 
     fill_in "name", with: "Roasted Brussel Sprouts"
-    fill_in "instructions", with: "Slather in oil, then roast for 20 minutes"
+    fill_in "submission", with: "Slather in oil, then roast for 20 minutes"
 
     click_on "Save"
 
@@ -31,6 +31,7 @@ feature "Creating, editing, and deleting a report", js: true do
 
     click_on "Delete"
 
+    click_on "Search"
     expect(Report.find_by_name("Roasted Brussel Sprouts")).to be_nil
 
   end
