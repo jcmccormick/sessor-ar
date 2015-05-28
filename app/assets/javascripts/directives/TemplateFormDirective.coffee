@@ -1,7 +1,7 @@
 directives = angular.module('directives')
 directives.directive('templateFormDirective',[()->
   {
-    controller: ($scope) ->
+    controller: [($scope) ->
 
       $scope.submit = ->
         alert 'Form submitted..'
@@ -13,6 +13,7 @@ directives.directive('templateFormDirective',[()->
         return
 
       return
+    ]
     templateUrl: 'template/directive-templates/form/form.html'
     restrict: 'E'
     scope: form: '='
