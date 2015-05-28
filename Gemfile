@@ -20,7 +20,7 @@ gem 'pg'
 gem 'jquery-rails'
 
 gem 'sprockets', '2.11.0'
-
+gem 'responders'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'actionpack-page_caching'

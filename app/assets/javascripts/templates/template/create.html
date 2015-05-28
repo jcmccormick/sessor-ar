@@ -43,7 +43,7 @@
             <accordion-group heading="{{field.field_title}}" ng-repeat="field in form.form_fields">
 
                 <div class="accordion-edit">
-                    <button class="btn btn-danger pull-right" type="button" ng-click="deleteField(field.field_id)"><i class="icon-trash icon-white"></i> Delete</button>
+                    <button class="btn btn-danger pull-right" type="button" ng-click="deleteField(field.field_id)"> Delete</button>
 
                     <div class="row">
                         <div class="span2">Field ID: </div>
@@ -69,10 +69,10 @@
                         <div class="span6">
                             <div ng-repeat="option in field.field_options">
                                 <input type="text" ng-model="option.option_title" value="{{option.option_title}}">
-                                <a class="btn btn-danger btn-mini right" type="button" ng-click="deleteOption(field, option)"><i class="icon-minus icon-white"></i></a>
+                                <a class="btn btn-danger btn-mini right" type="button" ng-click="deleteOption(field, option)"></a>
                                 <span class="label label-inverse">Value: {{ option.option_value }}</span>
                             </div>
-                            <button class="btn btn-primary btn-small" type="button" ng-click="addOption(field)"><i class="icon-plus icon-white"></i> Add Option</button>
+                            <button class="btn btn-primary btn-small" type="button" ng-click="addOption(field)"> Add Option</button>
                         </div>
                     </div>
 
@@ -112,8 +112,8 @@
         </accordion>
 
         <p class="text-center">
-            <button class="btn btn-primary right" type="button" ng-click="previewOn()"><i class="icon-eye-open icon-white"></i> Preview Form</button>
-            <button class="btn btn-danger right" type="button" ng-click="reset()"><i class="icon-refresh icon-white"></i> Reset</button>
+            <button class="btn btn-primary right" type="button" ng-click="previewOn()">Preview Form</button>
+            <button class="btn btn-danger right" type="button" ng-click="reset()">Reset</button>
         </p>
 
         <br><hr>
@@ -133,7 +133,7 @@
         <template-form-directive form="previewForm"></template-form-directive>
 
         <p class="text-center">
-            <button class="btn btn-primary btn-large right" type="button" ng-click="previewOff()"> Back to Create Mode</button>
+            <button class="btn btn-primary btn-large right" type="button" ng-click="previewOff()">Back to Create Mode</button>
         </p>
     </div>
 </div>
