@@ -17,5 +17,6 @@
 //= require angular-resource/angular-resource
 //= require angular-flash/dist/angular-flash
 //= require angular-rails-templates
+//= require ngstorage
 //= require_tree ./templates
 //= require_tree .

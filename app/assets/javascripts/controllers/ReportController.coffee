@@ -1,45 +1,50 @@
 controllers = angular.module('controllers')
-controllers.controller("ReportController", [ '$scope', '$routeParams', '$resource', '$location', 'flash'
-	($scope, $routeParams, $resource, $location, flash)->
-
-		Report = $resource('/reports/:reportId', { reportId: "@id", format: 'json' },
-			{
-				'save':   {method:'PUT'},
-				'create': {method:'POST'}
-			}
-		)
+controllers.controller("ReportController",  [ '$scope', '$routeParams', '$resource', '$location', '$localStorage', 'flash', 'ReportFactory',
+	($scope, $routeParams, $resource, $location, $localStorage, flash, ReportFactory)->
+		$scope.$storage = $localStorage
+		$scope.reports = []
+		$scope.report = []
+		$scope.$storage.reports = $scope.reports
+		$scope.$storage.report = $scope.report
 
 		if $routeParams.reportId
-			Report.get({reportId: $routeParams.reportId},
-				( (report)-> $scope.report = report ),
-				( (httpResponse)-> 
-					$scope.report = null 
-					flash.error   = "There is no report with ID #{$routeParams.reportId}"
-				)
+			$scope.report = new ReportFactory()
+			ReportFactory.get({id: $routeParams.reportId},
+				(result)-> result.$promise.then((result)-> $scope.report = result)
 			)
+
+			console.log $scope.report
+
+			# $scope.report = ReportFactory.get({id: $routeParams.reportId})
 		else
-			$scope.report = {}
+			$scope.report = new ReportFactory()
 
-		$scope.back   = -> $location.path("/reports")
-		$scope.edit   = -> $location.path("/reports/#{$scope.report.id}/edit")
-		$scope.cancel = ->
-			if $scope.report.id
-				$location.path("/reports/#{$scope.report.id}")
+		$scope.reports = ReportFactory.query()
+
+
+		$scope.view      = (reportId)-> $location.path("/reports/#{reportId}")
+		$scope.edit      = (reportId)-> $location.path("/reports/#{reportId}/edit")
+
+		$scope.save      = ->
+			if $routeParams.reportId
+				$scope.report.$update({id: $routeParams.reportId},
+				((response)->
+					$location.path("/reports/#{$scope.report.id}")),
+				((httpResponse)->
+					flash.error = "Could not update"))
 			else
+				$scope.report.$save({},
+				((response)->
+					$location.path("/reports/#{response.id}")),
+				((httpResponse)->
+					flash.error = "Unable to create a new report"))
+
+		$scope.delete = ()->
+			$scope.report.$delete({id: $routeParams.reportId},
+			(success)->
+				delete $scope.$storage.report
 				$location.path("/reports")
-
-		$scope.save = ->
-			onError = (_httpResponse)-> flash.error = "Something went wrong"
-			if $scope.report.id
-				$scope.report.$save(
-					( ()-> $location.path("/reports/#{$scope.report.id}") ),
-					onError)
-			else
-				Report.create($scope.report,
-					( (newReport)-> $location.path("/reports/#{newReport.id}") ),
-					onError)
-
-		$scope.delete = ->
-			$scope.report.$delete()
-			$scope.back()
+			(errors)->
+				console.log errors.data
+			)
 ])

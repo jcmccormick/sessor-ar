@@ -2,8 +2,10 @@ sessor = angular.module('sessor', [
   'templates',
   'ngRoute',
   'ngResource',
+  'ngStorage',
   'controllers',
   'factories',
+  'directives',
   'angular-flash.service',
   'angular-flash.flash-alert-directive'
 ])
@@ -21,13 +23,13 @@ sessor.config([ '$routeProvider', 'flashProvider',
       )
       .when('/reports',
         templateUrl: "show_reports.html"
-        controller: 'ReportsController'
+        controller: 'ReportController'
       )
       .when('/reports/new/',
         templateUrl: "edit_report.html"
         controller: 'ReportController'
       )
-      .when('/reports/:reportId/',
+      .when('/reports/:reportId',
         templateUrl: "show_report.html"
         controller: 'ReportController'
       )
@@ -35,19 +37,15 @@ sessor.config([ '$routeProvider', 'flashProvider',
         templateUrl: "edit_report.html"
         controller: 'ReportController'
       )
+      .when('/template',
+        templateUrl: "template.html"
+        controller: 'TemplateController'
+      )
+      .when('/draggable',
+        templateUrl: "draggable.html"
+      )
 ])
 
 controllers = angular.module('controllers',[])
 factories   = angular.module('factories',[])
-
-factories.factory( 'AuthServ', ["$cookieStore", '$http',
-  currentUser: null
-  ->
-    login: (email, password, fn)->
-      $cookieStore.put("currentUser", currentUser.name)
-    logout: ()->
-      currentUser = undefined
-      $cookieStore.put("currentUser", currentUser)
-    isLoggedIn: ()->
-      return currentUser != undefined
-])
+directives  = angular.module('directives',[])

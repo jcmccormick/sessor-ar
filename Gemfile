@@ -23,7 +23,7 @@ gem 'sprockets', '2.11.0'
 
 gem 'bower-rails'
 gem 'angular-rails-templates'
-
+gem 'actionpack-page_caching'
 gem "foreman"
 group :production, :staging do
   gem "rails_12factor"

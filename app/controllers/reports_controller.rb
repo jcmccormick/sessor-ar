@@ -5,7 +5,7 @@ class ReportsController < ApplicationController
   	@reports = if params[:keywords]
                  Report.where('name like ?',"%#{params[:keywords]}%")
                else
-                 Report.all.each
+                 Report.all
                end
   end
 
@@ -33,6 +33,6 @@ class ReportsController < ApplicationController
 
   private
     def allowed_params
-      params.require(:report).permit(:name, :submission, :response)
+      params.require(:report).permit(:name, :submission, :response, :active, :location)
     end
 end

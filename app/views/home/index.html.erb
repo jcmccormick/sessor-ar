@@ -7,13 +7,13 @@
 		    <strong class="alert-heading">Oops!</strong>
 		    <span class="alert-message">{{flash.message}}</span>
 		</div>
-
 		<div class="pull-right">
 			<button ng-click="home()" class="btn btn-default">Home</button>
 			<button ng-click="reports()" class="btn btn-default">Reports</button>
+			<button ng-click="draggable()" class="btn btn-default">Draggable</button>
+		</div>
+		<div class="container">
+			<div ng-view class="view-frame animate-view"></div>
 		</div>
 	</section>
-	<div class="container">
-		<div ng-view class="view-frame animate-view"></div>
-	</div>
 </div>
