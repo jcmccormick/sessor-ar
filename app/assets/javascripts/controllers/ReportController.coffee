@@ -8,14 +8,13 @@ controllers.controller("ReportController",  [ '$scope', '$routeParams', '$resour
 		$scope.$storage.report = $scope.report
 
 		if $routeParams.reportId
-			$scope.report = new ReportFactory()
-			ReportFactory.get({id: $routeParams.reportId},
-				(result)-> result.$promise.then((result)-> $scope.report = result)
+			promise = ReportFactory.get({id: $routeParams.reportId}).$promise
+			promise.then((res)->
+				$scope.report = res)
+			promise.catch((err)-> 
+				$location.path("/")
+				flash.error = "Sorry, we couldn't find that report."
 			)
-
-			console.log $scope.report
-
-			# $scope.report = ReportFactory.get({id: $routeParams.reportId})
 		else
 			$scope.report = new ReportFactory()
 
@@ -27,28 +26,25 @@ controllers.controller("ReportController",  [ '$scope', '$routeParams', '$resour
 
 		$scope.save      = ->
 			if $routeParams.reportId
-				$scope.report.$update({id: $routeParams.reportId},
-				((response)->
-					console.log response
-					$location.path("/reports/#{$scope.report.id}")),
-				((response)->
-					console.log response
-					flash.error = "Could not update"))
+				$scope.report.$update({id: $routeParams.reportId})
+					.then((res)-> 
+						$location.path("/reports/#{$scope.report.id}")
+						flash.message = "Report successfully updated.")
+					.catch((err)->
+						flash.alert = "There was an error updating. Try again later.")
 			else
-				$scope.report.$save({},
-				((response)->
-					console.log response
-					$location.path("/reports/#{response.id}")),
-				((response)->
-					console.log response
-					flash.error = "Unable to create a new report"))
+				$scope.report.$save()
+					.then((res)-> 
+						$location.path("/reports/#{$scope.report.id}") 
+						flash.message = "Report Updated")
+					.catch((err)->
+						flash.alert = "There was an issue creating this report. Try again later.")
 
 		$scope.delete = ()->
-			$scope.report.$delete({id: $routeParams.reportId},
-			(success)->
-				delete $scope.$storage.report
-				$location.path("/reports")
-			(errors)->
-				console.log errors.data
-			)
+			$scope.report.$delete({id: $routeParams.reportId})
+				.then((res)->
+					$location.path("/reports")
+					delete $scope.$storage.report)
+				.catch((err)->
+					flash.alert = "There was an unexpected issue. Try again later.")
 ])
