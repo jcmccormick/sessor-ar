@@ -31,12 +31,9 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
     textfield = '
     <div class="field row">
       <div class="span2">{{field.field_title}}:</div>
-        <span class="required-error" ng-show="field.field_required && !field.field_value">* required </span>
-        <div class="span4">
-          <div class="control-group input-append">
-            <input type="date" class="form-control" ng-model="field.field_value" data-date-format="mm/dd/yyyy" ng-required="field.field_required" ng-disabled="field.field_disabled">
-          </div>
-        </div>
+      <div class="span4">
+        <input type="text" ng-model="field.field_value" value="{{field.field_value}}" ng-required="field.field_required" ng-disabled="field.field_disabled">
+        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
       </div>
     </div>'
 
@@ -67,12 +64,9 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
     date = '
     <div class="field row">
       <div class="span2">{{field.field_title}}:</div>
-      <span class="required-error" ng-show="field.field_required && !field.field_value">* required </span>
       <div class="span4">
-        <div class="control-group input-append">
-          <input type="text" ng-model="field.field_value" data-date-format="mm/dd/yyyy" bs-datepicker  ng-required="field.field_required" ng-disabled="field.field_disabled">
-          <button type="button" class="btn" data-toggle="datepicker"></button>
-        </div>
+        <input type="date" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
+      <span class="required-error" ng-show="field.field_required && !field.field_value">* required </span>
       </div>
     </div>'
 
@@ -81,9 +75,7 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
       <div class="span2">{{field.field_title}}:</div>
       <div class="span4">
         <select ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
-          <option ng-repeat="option in field.field_options" 
-              ng-selected="option.option_value == field.field_value"
-              value="{{option.option_id}}">
+          <option ng-repeat="option in field.field_options" ng-selected="option.option_value == field.field_value" value="{{option.option_id}}">
             {{option.option_title}}
           </option>
         </select>    
@@ -118,6 +110,10 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
       </div>
     </div>
     <br>'
+
+    section = '
+    
+    '
 
     # GET template content from path
     template = getTemplate(scope.field)
