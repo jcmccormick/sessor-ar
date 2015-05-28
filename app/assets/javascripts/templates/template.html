@@ -1,9 +1,15 @@
 <header class="row">
-  <h1 class="text-center col-md-6 col-md-offset-3">Welcome</h1>
+  <h1 class="text-center col-md-6 col-md-offset-3">Template Developer</h1>
 </header>
 
-<form>
-	<select name="bla" value="bla">
-		<option ng-repeat="field in fieldTypes" value="{{field.name}}">{{field.name}}</option>
-	</select>
-</form>
+<form-directive form="form" class="ng-isolate-scope ng-scope">
+   ...
+   <form name="myForm" id="myForm">
+      ...
+      <div ng-repeat="field in form.fields">
+         <field-directive field="field">
+            ...
+         </field-directive>
+      </div>
+   </form>
+</form-directive>

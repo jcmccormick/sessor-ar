@@ -3,9 +3,11 @@ sessor = angular.module('sessor', [
   'ngRoute',
   'ngResource',
   'ngStorage',
+  'ngDialog',
   'controllers',
-  'factories',
   'directives',
+  'factories',
+  'services',
   'angular-flash.service',
   'angular-flash.flash-alert-directive'
 ])
@@ -38,8 +40,15 @@ sessor.config([ '$routeProvider', 'flashProvider',
         controller: 'ReportController'
       )
       .when('/template',
-        templateUrl: "template.html"
+        templateUrl: 'template/main.html'
+      )
+      .when('/template/create',
+        templateUrl: 'template/create.html'
         controller: 'TemplateController'
+      )
+      .when('/template/:id',
+        templateUrl: 'template/view.html'
+        controller: 'ViewReportController'
       )
       .when('/draggable',
         templateUrl: "draggable.html"
@@ -49,3 +58,4 @@ sessor.config([ '$routeProvider', 'flashProvider',
 controllers = angular.module('controllers',[])
 factories   = angular.module('factories',[])
 directives  = angular.module('directives',[])
+services    = angular.module('services',[])

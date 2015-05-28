@@ -18,5 +18,6 @@
 //= require angular-flash/dist/angular-flash
 //= require angular-rails-templates
 //= require ngstorage
+//= require ngDialog
 //= require_tree ./templates
 //= require_tree .

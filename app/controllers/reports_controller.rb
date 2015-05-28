@@ -2,11 +2,7 @@ class ReportsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-  	@reports = if params[:keywords]
-                 Report.where('name like ?',"%#{params[:keywords]}%")
-               else
-                 Report.all
-               end
+  	@reports = Report.all
   end
 
   def show

@@ -3,9 +3,11 @@
 		<div class="container">
 			<span class="pull-left">Sessor</span>
 			<div class="pull-right">
+				<button ng-repeat="link in nav">{{link.name}}</button>
 				<button ng-click="home()" class="btn btn-default">Home</button>
 				<button ng-click="reports()" class="btn btn-default">Reports</button>
 				<button ng-click="draggable()" class="btn btn-default">Draggable</button>
+				<button ng-click="template()" class="btn btn-default">Template</button>
 			</div>
 			<div flash-alert active-class="in" class="alert fixed fade col-md-6 col-md-offset-3">
 				<button type="button" class="close" ng-click="hide()">&times;</button>
