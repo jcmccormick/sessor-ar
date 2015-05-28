@@ -29,14 +29,18 @@ controllers.controller("ReportController",  [ '$scope', '$routeParams', '$resour
 			if $routeParams.reportId
 				$scope.report.$update({id: $routeParams.reportId},
 				((response)->
+					console.log response
 					$location.path("/reports/#{$scope.report.id}")),
-				((httpResponse)->
+				((response)->
+					console.log response
 					flash.error = "Could not update"))
 			else
 				$scope.report.$save({},
 				((response)->
+					console.log response
 					$location.path("/reports/#{response.id}")),
-				((httpResponse)->
+				((response)->
+					console.log response
 					flash.error = "Unable to create a new report"))
 
 		$scope.delete = ()->
