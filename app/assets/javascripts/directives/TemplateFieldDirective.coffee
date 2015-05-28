@@ -1,11 +1,3 @@
-__indexOf = [].indexOf || (item)->
-  i = 0
-  for i in [0...this.length]
-    if i in this && this[i] == item
-      i++
-      return i
-  return -1
-
 directives = angular.module('directives')
 directives.directive('templateFieldDirective', ['$http', '$compile',
 ($http, $compile) ->
@@ -22,6 +14,15 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
       'password'
       'radio'
     ]
+
+    __indexOf = [].indexOf || (item)->
+      i = 0
+      for i in [0...this.length]
+        if i in this && this[i] == item
+          i++
+          return i
+      return -1
+
     if __indexOf.call(supported_fields, type) >= 0
       return type
     return
@@ -110,10 +111,6 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
       </div>
     </div>
     <br>'
-
-    section = '
-    
-    '
 
     # GET template content from path
     template = getTemplate(scope.field)
