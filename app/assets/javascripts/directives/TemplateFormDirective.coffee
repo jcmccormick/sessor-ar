@@ -1,6 +1,5 @@
 directives = angular.module('directives')
-directives.directive('templateFormDirective',
-()->
+directives.directive('templateFormDirective',[()->
   {
     controller: ($scope) ->
 
@@ -18,4 +17,4 @@ directives.directive('templateFormDirective',
     restrict: 'E'
     scope: form: '='
   }
-)
+])
