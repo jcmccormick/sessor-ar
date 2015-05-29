@@ -6,39 +6,38 @@ services.service('TemplateService', ['$http',
     fields: [
       {
         name: 'textfield'
-        value: 'Textfield'
-      }
-      {
-        name: 'email'
-        value: 'E-mail'
-      }
-      {
-        name: 'password'
-        value: 'Password'
-      }
-      {
-        name: 'radio'
-        value: 'Radio Buttons'
-      }
-      {
-        name: 'dropdown'
-        value: 'Dropdown List'
-      }
-      {
-        name: 'date'
-        value: 'Date'
+        value: 'Text Line'
+        glyphicon: 'glyphicon-font'
       }
       {
         name: 'textarea'
         value: 'Text Area'
+        glyphicon: 'glyphicon-align-left'
+      }
+      {
+        name: 'radio'
+        value: 'Radio Button'
+        glyphicon: 'glyphicon-record'
       }
       {
         name: 'checkbox'
         value: 'Checkbox'
+        glyphicon: 'glyphicon-check'
       }
       {
-        name: 'hidden'
-        value: 'Hidden'
+        name: 'dropdown'
+        value: 'Dropdown List'
+        glyphicon: 'glyphicon-list'
+      }
+      {
+        name: 'date'
+        value: 'Date'
+        glyphicon: 'glyphicon-calendar'
+      }
+      {
+        name: 'email'
+        value: 'E-mail'
+        glyphicon: 'glyphicon-envelope'
       }
     ]
     form: (id) ->

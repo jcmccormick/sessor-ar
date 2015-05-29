@@ -1,5 +1,5 @@
 directives = angular.module('directives')
-directives.directive('myDraggable', ['$document',
+directives.directive('myDraggableDirective', ['$document',
   ($document) ->
     {
       restrict: 'E'
@@ -43,7 +43,7 @@ directives.directive('myDraggable', ['$document',
       return
  }
 ])
-directives.directive('DragSelector', [()->
+directives.directive('dragSelectorDirective', [()->
   {
     restrict: 'E'
     transclude: true
@@ -51,7 +51,7 @@ directives.directive('DragSelector', [()->
     controller: ($scope, $element, $attrs) ->
   }
 ])
-directives.directive('Dragger',[($sce) ->
+directives.directive('draggerDirective',[($sce) ->
   {
     require: '^DragSelector'
     scope: selectedEngine: '='

@@ -6,7 +6,7 @@ controllers.controller('TemplateController', [ '$scope', '$resource', 'ngDialog'
 	# new form
 	$scope.form = {}
 	$scope.form.form_id = 1
-	$scope.form.form_name = 'My Form'
+	$scope.form.form_name = ''
 	$scope.form.form_fields = []
 	# previewForm - for preview purposes, form will be copied into this
 	# otherwise, actual form might get manipulated in preview mode
@@ -21,13 +21,13 @@ controllers.controller('TemplateController', [ '$scope', '$resource', 'ngDialog'
 	$scope.accordion.oneAtATime = true
 	# create new field button click
 
-	$scope.addNewField = ->
-		# incr field_id counter
+	$scope.addNewField = (type)->
+		console.log(type)
 		$scope.addField.lastAddedID++
 		newField = 
 			'field_id': $scope.addField.lastAddedID
-			'field_title': 'New field - ' + $scope.addField.lastAddedID
-			'field_type': $scope.addField.new
+			'field_title': $scope.addField.lastAddedID + ' ' + type + ' field '
+			'field_type': type
 			'field_value': ''
 			'field_required': true
 			'field_disabled': false
@@ -114,4 +114,31 @@ controllers.controller('TemplateController', [ '$scope', '$resource', 'ngDialog'
 		$scope.form.form_fields.splice 0, $scope.form.form_fields.length
 		$scope.addField.lastAddedID = 0
 		return
+
+	# ui-bootstrap accordion
+	$scope.oneAtATime = true
+	$scope.groups = [
+		{
+			title: 'Dynamic Group Header - 1'
+			content: 'Dynamic Group Body - 1'
+		}
+		{
+			title: 'Dynamic Group Header - 2'
+			content: 'Dynamic Group Body - 2'
+		}
+	]
+	$scope.items = [
+		'Item 1'
+		'Item 2'
+		'Item 3'
+	]
+
+	$scope.addItem = ->
+		newItemNo = $scope.items.length + 1
+		$scope.items.push 'Item ' + newItemNo
+		return
+
+	$scope.status =
+		isFirstOpen: true
+		isFirstDisabled: false
 ])

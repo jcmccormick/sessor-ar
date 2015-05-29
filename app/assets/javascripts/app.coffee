@@ -4,6 +4,7 @@ sessor = angular.module('sessor', [
   'ngResource',
   'ngStorage',
   'ngDialog',
+  'ui.bootstrap',
   'controllers',
   'directives',
   'factories',
