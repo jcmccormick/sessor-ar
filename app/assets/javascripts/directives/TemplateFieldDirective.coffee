@@ -30,30 +30,31 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
   linker = (scope, element) ->
 
     textfield = '
-    <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
-      <div class="span4">
-        <input type="text" ng-model="field.field_value" value="{{field.field_value}}" ng-required="field.field_required" ng-disabled="field.field_disabled">
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}:
         <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
+      </div>
+      <div>
+        <input type="text" class="form-control" ng-model="field.field_value" value="{{field.field_value}}" ng-required="field.field_required" ng-disabled="field.field_disabled">
       </div>
     </div>'
 
     textarea = '
-    <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
-      <div class="span4">
-        <textarea type="text" ng-model="field.field_value" value="{{field.field_value}}" ng-required="field.field_required" ng-disabled="field.field_disabled"></textarea>
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}:
         <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
+      </div>
+      <div>
+        <textarea type="text" class="form-control" ng-model="field.field_value" value="{{field.field_value}}" ng-required="field.field_required" ng-disabled="field.field_disabled"></textarea>
       </div>
     </div>'
 
     email = '
-    <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
-      <div class="span4">
-        <input type="email" placeholder="Email" value="{{field.field_value}}" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled"/>
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}:
         <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
       </div>
+      <input type="email" class="form-control" placeholder="Email" value="{{field.field_value}}" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled"/>
     </div>'
 
     checkbox = '
@@ -63,56 +64,50 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
     <span class="required-error" ng-show="field.field_required && field.field_value == 0">(* required)</span>'
 
     date = '
-    <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
-      <div class="span4">
-        <input type="date" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
-      <span class="required-error" ng-show="field.field_required && !field.field_value">* required </span>
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}:
+        <span class="required-error" ng-show="field.field_required && !field.field_value">* required </span>
       </div>
+      <input type="date" class="form-control" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
     </div>'
 
     dropdown = '
-    <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
-      <div class="span4">
-        <select ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
-          <option ng-repeat="option in field.field_options" ng-selected="option.option_value == field.field_value" value="{{option.option_id}}">
-            {{option.option_title}}
-          </option>
-        </select>    
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}:
         <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
       </div>
+      <select class="form-control" ng-model="field.field_value" ng-required="field.field_required" ng-disabled="field.field_disabled">
+        <option ng-repeat="option in field.field_options" ng-selected="option.option_value == field.field_value" value="{{option.option_id}}">
+          {{option.option_title}}
+        </option>
+      </select>
     </div>
     <br>'
+
+    radio = '
+    <div class="form-group">
+      <div class="form-label">{{field.field_title}}: 
+        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
+      </div>
+      <div class="form-control" ng-repeat="option in field.field_options">
+        <input type="radio" value="{{option.option_value}}" ng-model="field.field_value"  ng-required="field.field_required" ng-disabled="field.field_disabled"/>
+        &nbsp;<span ng-bind="option.option_title"></span>
+      </div>
+    </div>'
+
+    # currently unused controls
 
     hidden = '
     <input type="hidden" ng-model="field.field_value" value="{{field.field_value}}" ng-disabled="field.field_disabled">'
 
     password = '
     <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
+      <div class="span2">{{field.field_title}}:
+        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span></div>
       <div class="span4">
         <input type="password" ng-model="field.field_value" value="{{field.field_value}}"  ng-required="field.field_required" ng-disabled="field.field_disabled">
-        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
       </div>
     </div>'
-
-    radio = '
-    <div class="field row">
-      <div class="span2">
-        {{field.field_title}}: 
-        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
-      </div>
-      <div class="span4">
-        <div ng-repeat="option in field.field_options" class="row-fluid">
-          <label>
-            <input type="radio" value="{{option.option_value}}" ng-model="field.field_value"  ng-required="field.field_required" ng-disabled="field.field_disabled"/>
-            &nbsp;<span ng-bind="option.option_title"></span>
-          </label>
-        </div>
-      </div>
-    </div>
-    <br>'
 
     # GET template content from path
     template = getTemplate(scope.field)
