@@ -99,7 +99,10 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
 
     radio = '
     <div class="field row">
-      <div class="span2">{{field.field_title}}:</div>
+      <div class="span2">
+        {{field.field_title}}: 
+        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
+      </div>
       <div class="span4">
         <div ng-repeat="option in field.field_options" class="row-fluid">
           <label>
@@ -107,7 +110,6 @@ directives.directive('templateFieldDirective', ['$http', '$compile',
             &nbsp;<span ng-bind="option.option_title"></span>
           </label>
         </div>
-        <span class="required-error" ng-show="field.field_required && !field.field_value">* required</span>
       </div>
     </div>
     <br>'

@@ -22,15 +22,21 @@ controllers.controller('TemplateController', [ '$scope', '$resource', 'ngDialog'
 	# create new field button click
 
 	$scope.addNewField = (type)->
-		console.log(type)
+		i = 0
+		while i < $scope.addField.types.length
+			if $scope.addField.types[i].name == type
+				glyphicon = $scope.addField.types[i].glyphicon
+				break
+			i++
 		$scope.addField.lastAddedID++
 		newField = 
 			'field_id': $scope.addField.lastAddedID
-			'field_title': 'Unnamed'
+			'field_title': 'Click to edit this ' + type
 			'field_type': type
 			'field_value': ''
 			'field_required': true
 			'field_disabled': false
+			'field_glyphicon': glyphicon
 		# put newField into fields array
 		$scope.form.form_fields.push newField
 		return

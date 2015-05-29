@@ -1,110 +1,92 @@
-<div class="row">
-    <section class="col-xs-6 col-xs-offset-3">
-        <div class="panel panel-info">
-            <header class="panel-heading"><h1>Template Builder</h1></header>
-            <div class="form-group has-feedback" ng-hide="previewMode">
-                <input type="text" class="form-control" ng-model="form.form_name" placeholder="Enter a title..." />
-                <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
-            </div>
-            <div ng-hide="previewMode">
-                <ul class="text-center list-inline">
-                    <li ng-repeat="type in addField.types">
-                        <button popover="{{type.value}}" popover-placement="bottom" popover-trigger="mouseenter" class="btn btn-info btn-lg" ng-model="addField.new" ng-click="addNewField(type.name)"><i class="glyphicon {{type.glyphicon}}"></i>
-                        </button>
-                    </li>
-                </ul>   
-            </div>
-            <div class="panel-body text-center" ng-show="form.form_fields.length != 0">
-                <label class="checkbox"><input type="checkbox" ng-model="oneAtATime">Open only one at a time</label>
-                <button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
-                <button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
-                <button class="btn btn-primary right" type="button" ng-click="previewOn()">Toggle Preview</button>
-                <button class="btn btn-danger right" type="button" ng-click="reset()">Reset</button>
-            </div>
-            <div class="panel" ng-hide="previewMode">
-                <header class="panel-heading">
-                    <h1 class="panel-body text-center" ng-show="form.form_fields.length == 0">Add a field to get started.</h1>
-                </header>
-                
-                <accordion close-others="accordion.oneAtATime">
-                    <accordion-group ng-repeat="field in form.form_fields">
-                        <pre>{{field}}</pre>
-                        <accordion-heading class="panel-heading">
-                            <h4>Field Name: {{field.field_title}}<br>
-                            Type: {{field.field_type}}</h4>
-                        </accordion-heading>
-                        <header class="panel-heading"><h2>Item </h2></header>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label class="control-label">Field ID:</label>
-                                <div class="span7">{{field.field_id}}</div>
-                            </div>
-                            <div class="form-group">
-                                <label class="h4">Field Type:</label>
-                                <div class="span7">{{field.field_type}}</div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Field Title:</label>
-                                <div class="span7"><input type="text" ng-model="field.field_title" value="{{field.field_title}}"></div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Field Default Value:</label>
-                                <div class="span7"><input type="text" ng-model="field.field_value" value="{{field.field_value}}"></div>
-                            </div>
-                            <div class="form-group" ng-show="showAddOptions(field)">
-                                <label class="control-label">Field Options:</label>
-                                <div class="span6">
-                                    <div ng-repeat="option in field.field_options">
-                                        <input type="text" ng-model="option.option_title" value="{{option.option_title}}">
-                                        <a class="btn btn-danger btn-small right" type="button" ng-click="deleteOption(field, option)"><i class="glyphicon glyphicon-remove"></i></a>
-                                        <span class="label label-inverse">Value: {{ option.option_value }}</span>
-                                    </div><br>
-                                    <button class="btn btn-primary btn-small" type="button" ng-click="addOption(field)"> Add Option</button>
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Required:
-                            </div>
-                            <div class="form-control">
-                                <label>
-                                    <input type="radio" ng-value="true" ng-selected ng-model="field.field_required"/>
-                                    &nbsp; Yes
-                                </label>
-                                <label>
-                                    <input type="radio" ng-value="false" ng-model="field.field_required"/>
-                                    &nbsp; No
-                                </label>
-                            </div>
+<section class="col-xs-6 col-xs-offset-3">
+    <h1>Template Builder</h1>
+    <div class="form-group has-feedback" ng-hide="previewMode">
+        <input type="text" class="form-control" ng-model="form.form_name" placeholder="Enter a title..." />
+        <i class="glyphicon glyphicon-pencil form-control-feedback"></i>
+    </div>
+    <div ng-hide="previewMode">
+        <ul class="text-center list-inline">
+            <li ng-repeat="type in addField.types">
+                <button popover="{{type.value}}" popover-placement="bottom" popover-trigger="mouseenter" class="btn btn-info btn-lg" ng-model="addField.new" ng-click="addNewField(type.name)"><i class="glyphicon {{type.glyphicon}}"></i>
+                </button>
+            </li>
+        </ul>   
+    </div>
+    <div class="panel-body text-center" ng-show="form.form_fields.length != 0">
+        <button class="btn btn-primary right" type="button" ng-click="previewOn()">Toggle Preview</button>
+        <button class="btn btn-danger right" type="button" ng-click="reset()">Reset</button>
+    </div>
+    <h1 class="text-center" ng-show="form.form_fields.length == 0">Add a field to get started...</h1>
+    <div ng-hide="previewMode">
+        <accordion close-others="accordion.oneAtATime">
+            <accordion-group class="panel panel-info" ng-repeat="field in form.form_fields">
+                <accordion-heading class="panel-heading form-group has-feedback">
+                    <h4>{{field.field_title}}
+                    <i class="glyphicon {{field.field_glyphicon}} pull-right"></i></h4>
+                </accordion-heading>
 
-        					<div class="form-group">
-        						<label class="control-label">Disabled:
-                            </div>
-                            <div class="form-control">
-                                <label>
-                                    <input type="radio" ng-value="true" ng-selected ng-model="field.field_disabled"/>
-                                    &nbsp; Yes
-                                </label>
-                                <label>
-                                    <input type="radio" ng-value="false" ng-model="field.field_disabled"/>
-                                    &nbsp; No
-                                </label>
-                            </div>
-                            <button class="btn btn-danger pull-right" type="button" ng-click="deleteField(field.field_id)"> Delete</button>
-                        </div>
-                    </accordion-group>
-                </accordion>
-            </div>
-        </div>
-        <div class="form-fields-preview" ng-show="previewMode">
-            <template-form-directive form="previewForm"></template-form-directive>
+                <div class="form-group">
+                    <label class="control-label">Field Title:</label>
+                    <div class="span7"><input type="text" ng-model="field.field_title" value="{{field.field_title}}"></div>
+                </div>
 
-            <p class="text-center">
-                <button class="btn btn-primary btn-large right" type="button" ng-click="previewOff()">Back to Create Mode</button>
-            </p>
-        </div>
-    </section>
-</div>
+                <div class="form-group">
+                    <label class="control-label">Field Default Value:</label>
+                    <div class="span7"><input type="text" ng-model="field.field_value" value="{{field.field_value}}"></div>
+                </div>
+
+                <div class="form-group" ng-show="showAddOptions(field)">
+                    <label class="control-label">Field Options:</label>
+                    <div class="span6">
+                        <div ng-repeat="option in field.field_options">
+                            <input type="text" ng-model="option.option_title" value="{{option.option_title}}">
+                            <a class="btn btn-danger btn-xs right" type="button" ng-click="deleteOption(field, option)"><i class="glyphicon glyphicon-remove"></i></a>
+                            <span class="label label-inverse">Value: {{ option.option_value }}</span>
+                        </div><br>
+                        <button class="btn btn-primary btn-small" type="button" ng-click="addOption(field)"> Add Option</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Required:
+                </div>
+                <div class="form-control">
+                    <label>
+                        <input type="radio" ng-value="true" ng-selected ng-model="field.field_required"/>
+                        &nbsp; Yes
+                    </label>
+                    <label>
+                        <input type="radio" ng-value="false" ng-model="field.field_required"/>
+                        &nbsp; No
+                    </label>
+                </div>
+
+				<div class="form-group">
+					<label class="control-label">Disabled:
+                </div>
+                <div class="form-control">
+                    <label>
+                        <input type="radio" ng-value="true" ng-selected ng-model="field.field_disabled"/>
+                        &nbsp; Yes
+                    </label>
+                    <label>
+                        <input type="radio" ng-value="false" ng-model="field.field_disabled"/>
+                        &nbsp; No
+                    </label>
+                </div>
+                <button class="btn btn-danger pull-right h1" type="button" ng-click="deleteField(field.field_id)"> Delete</button>
+            </accordion-group>
+        </accordion>
+    </div>
+    <div class="form-fields-preview" ng-show="previewMode">
+        <template-form-directive form="previewForm"></template-form-directive>
+
+        <p class="text-center">
+            <button class="btn btn-primary btn-large right" type="button" ng-click="previewOff()">Back to Create Mode</button>
+        </p>
+    </div>
+</section>
 <!-- <div class="text-center">
                 <a class="btn btn-small btn-primary" ng-show="!showJson" ng-click="showJson = true">Show form json object</a>
                 <a class="btn btn-small btn-inverse" ng-show="showJson" ng-click="showJson = false">Hide form json object</a><br><br>

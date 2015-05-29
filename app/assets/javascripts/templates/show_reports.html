@@ -1,36 +1,31 @@
-<header>
-  <h1 class="row col-md-6 col-md-offset-3">Reports</h1>
-</header>
+<div class="row col-md-6 col-md-offset-3">
+  
+  <h1>Reports</h1>
 
 
-<section class="row">
-  <form>
-    <div class="form-group col-md-6 col-md-offset-3">
+  <section class="row">
+    <div class="form-group">
       <input ng-model="keywords" name="keywords" type="text" autofocus class="form-control" placeholder="Search by ID, Title, Participants, and more...">
     </div>
-    <div class="form-group col-md-6 col-md-offset-3">
+    <div class="form-group">
       <a href ng-click="clearForm()"class="btn btn-primary btn-md">Clear</a>
       <a href ng-click="newReport()" class="btn btn-info btn-md pull-right">New</a>
     </div>
-  </form>
-</section>
-<section class="row" ng-if="reports">
-  <ul class="list-unstyled">
-    <li ng-repeat="report in reports | filter: keywords | orderBy: '-id'">
-      <section class="well col-md-6 col-md-offset-3">
-        <div class="col-md-12">
-          <h1 class="h3 text-left row"><a href ng-click="view(report.id)" >{{report.id}} - {{report.name}}</a></h1>
-          <div class="text-left row">
-            <p>Location: {{report.location}}</p>
-            <p>Active: {{report.active}}</p>
-            <p>Submission: {{report.submission}}</p>
-            <p>Response: {{report.response}}</p>
-          </div>
-          <div class="row">
-            <button ng-click="edit(report.id)" class="btn btn-info">Edit</button>
-          </div>
+  </section>
+  <section ng-if="reports">
+    <ul class="list-unstyled">
+      <li class="panel panel-info" ng-repeat="report in reports | filter: keywords | orderBy: '-id'">
+        <h1 class="panel-heading text-left"><a href ng-click="view(report.id)" >{{report.id}} - {{report.name}}</a></h1>
+        <div class="text-left">
+          <p>Location: {{report.location}}</p>
+          <p>Active: {{report.active}}</p>
+          <p>Submission: {{report.submission}}</p>
+          <p>Response: {{report.response}}</p>
         </div>
-      </section>
-    </li>
-  </ul>
-</section>
+        <div class="row">
+          <button ng-click="edit(report.id)" class="btn btn-info">Edit</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
