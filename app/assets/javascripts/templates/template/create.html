@@ -17,7 +17,8 @@
         <button class="btn btn-primary right" type="button" ng-click="previewOn()">Toggle Preview</button>
         <button class="btn btn-danger right" type="button" ng-click="reset()">Reset</button>
     </div>
-    <h1 class="text-center" ng-show="form.form_fields.length == 0">Add a field to get started...</h1>
+    <h4 class="text-center" ng-show="form.form_fields.length == 0">
+    <br><br><br><br><br>Add a field to get started...</h1>
     <div ng-hide="previewMode">
         <accordion close-others="accordion.oneAtATime">
             <accordion-group class="panel panel-info" ng-repeat="field in form.form_fields">
