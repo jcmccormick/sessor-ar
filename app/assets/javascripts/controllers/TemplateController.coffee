@@ -26,7 +26,7 @@ controllers.controller('TemplateController', [ '$scope', '$resource', 'ngDialog'
 		$scope.addField.lastAddedID++
 		newField = 
 			'field_id': $scope.addField.lastAddedID
-			'field_title': $scope.addField.lastAddedID + ' ' + type + ' field '
+			'field_title': 'Unnamed'
 			'field_type': type
 			'field_value': ''
 			'field_required': true

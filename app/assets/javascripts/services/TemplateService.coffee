@@ -12,7 +12,7 @@ services.service('TemplateService', ['$http',
       {
         name: 'textarea'
         value: 'Text Area'
-        glyphicon: 'glyphicon-align-left'
+        glyphicon: 'glyphicon-comment'
       }
       {
         name: 'radio'
